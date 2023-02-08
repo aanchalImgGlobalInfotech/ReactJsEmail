@@ -7,10 +7,11 @@ import emailjs from "emailjs-com";
 
     emailjs
       .sendForm(
-        "service_x275zf8",
-        "template_w4yllec",
+        `${process.env.REACT_APP_SERVICE}`,
+        `${process.env.REACT_APP_TEMPLATE}`,
+
         e.target,
-        "qw-g2w_b1SqcChw4k"
+        `${process.env.REACT_APP_USERNAME}`
       )
       .then(
         (result) => {
